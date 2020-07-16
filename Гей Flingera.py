@@ -21,7 +21,7 @@ class AFKMod(loader.Module):
         self._db = db
         self._me = await client.get_me()
 
-    async def rfdcmd(self, message):
+    async def pdrcmd(self, message):
         """.rfd [текст]"""
         if utils.get_args_raw(message):
             self._db.set(__name__, "afk", utils.get_args_raw(message))
@@ -31,7 +31,7 @@ class AFKMod(loader.Module):
         await self.allmodules.log("afk", data=utils.get_args_raw(message) or None)
         await utils.answer(message, self.strings("gone", message))
 
-    async def unrfdcmd(self, message):
+    async def unpdrcmd(self, message):
         """Перестаёт писать"""
         self._db.set(__name__, "afk", False)
         self._db.set(__name__, "gone", None)
