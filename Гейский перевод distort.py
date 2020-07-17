@@ -18,11 +18,10 @@ async def d(message):
 	else:
 		await message.edit("‮Reply to image, fucking idiot")
 		return
-"""await message.edit(" ‮`P` `r` `o` `c` `e` `s` `s` `i` `n` `g` `.` `.` `.`")
-	await message.edit("`Е` `б` `ё` `м` `с` `я` `.` `.` `.`")"""
-for distorted in glob.glob("distorted*"):
+
+        for distorted in glob.glob("distorted*"):
 		os.remove(distorted)
-for findistorted in glob.glob("*/distorted*"):
+        for findistorted in glob.glob("*/distorted*"):
 		os.remove(findistorted)
 
 	fname = f"distorted{random.randint(1, 100)}.png"
@@ -39,8 +38,6 @@ for findistorted in glob.glob("*/distorted*"):
 	buf.name = 'image.png'
 	image.save(buf, 'PNG')
 	buf.seek(0)
-"""await message.edit("‮`S` `e` `n` `d` `i` `n` `g` `.` `.` `.`")
-	await message.edit("`К` `о` `н` `ч` `а` `е` `м` `.` `.` `.`")"""
         await message.client.send_file(message.chat_id, buf, reply_to=reply_message.id)
 	await message.delete()
 	
