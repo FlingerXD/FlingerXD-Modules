@@ -4,7 +4,7 @@ from telethon.tl.types import DocumentAttributeFilename
 from uniborg.util import admin_cmd
 """Не подписался без матери остался"""
 """https://t.me/memeframe"""
-"""автор этого говнокода @FlinGer_Bs"""
+"""автор этого говнокода @FlinGer_Bs, Помог @Nicolay230519 """
 
 
 @borg.on(admin_cmd(pattern=".d(.*)", allow_sudo=True)) 
