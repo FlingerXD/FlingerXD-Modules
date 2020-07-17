@@ -23,8 +23,7 @@ async def d(message):
 		os.remove(distorted)
         for findistorted in glob.glob("*/distorted*"):
 		os.remove(findistorted)
-
-	fname = f"distorted{random.randint(1, 100)}.png"
+        fname = f"distorted{random.randint(1, 100)}.png"
 	
 	with open(fname, "wb") as file:
 		file.write(await message.client.download_media(data, bytes))
