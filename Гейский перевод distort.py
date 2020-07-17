@@ -9,7 +9,6 @@ from uniborg.util import admin_cmd
 
 @borg.on(admin_cmd(pattern=".d(.*)", allow_sudo=True)) 
 async def d(message):
-	fname = ' '
 	if message.is_reply:
 		reply_message = await message.get_reply_message()
 		data = await check_media(reply_message)
