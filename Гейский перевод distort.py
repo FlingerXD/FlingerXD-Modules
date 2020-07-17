@@ -9,6 +9,7 @@ from uniborg.util import admin_cmd
 
 @borg.on(admin_cmd(pattern=".d(.*)", allow_sudo=True)) 
 async def d(message):
+	fname = ' '
 	if message.is_reply:
 		reply_message = await message.get_reply_message()
 		data = await check_media(reply_message)
@@ -18,12 +19,13 @@ async def d(message):
 	else:
 		await message.edit("‮Reply to image, fucking idiot")
 		return
-
-        for distorted in glob.glob("distorted*"):
+	await message.edit("`Е` `б` `ё` `м` `с` `я` `.` `.` `.`")
+	for distorted in glob.glob("distorted*"):
 		os.remove(distorted)
-        for findistorted in glob.glob("*/distorted*"):
-		os.remove(findistorted)
-        fname = f"distorted{random.randint(1, 100)}.png"
+
+		for findistorted in glob.glob("*/distorted*"):
+			os.remove(findistorted)
+			fname = f"distorted{random.randint(1, 100)}.png"
 	
 	with open(fname, "wb") as file:
 		file.write(await message.client.download_media(data, bytes))
@@ -37,7 +39,8 @@ async def d(message):
 	buf.name = 'image.png'
 	image.save(buf, 'PNG')
 	buf.seek(0)
-        await message.client.send_file(message.chat_id, buf, reply_to=reply_message.id)
+	await message.edit("`К` `о` `н` `ч` `а` `е` `м` `.` `.` `.`")
+	await message.client.send_file(message.chat_id, buf, reply_to=reply_message.id)
 	await message.delete()
 	
 
