@@ -20,9 +20,9 @@ async def d(message):
 		return
 """await message.edit(" ‮`P` `r` `o` `c` `e` `s` `s` `i` `n` `g` `.` `.` `.`")
 	await message.edit("`Е` `б` `ё` `м` `с` `я` `.` `.` `.`")"""
-        for distorted in glob.glob("distorted*"):
+       for distorted in glob.glob("distorted*"):
 		os.remove(distorted)
-	for findistorted in glob.glob("*/distorted*"):
+       for findistorted in glob.glob("*/distorted*"):
 		os.remove(findistorted)
 
 	fname = f"distorted{random.randint(1, 100)}.png"
