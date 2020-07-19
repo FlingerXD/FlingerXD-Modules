@@ -5,8 +5,8 @@ import os
 def register(cb):
 	cb(AudioShakalMod())
 class AudioShakalMod(loader.Module):
-	"""АудиоШакал"""
-	strings = {'name': 'АудиоШакал'}
+	"""АудиоШакалПеревод"""
+	strings = {'name': 'АудиоШакалПеревод'}
 	def __init__(self):
 		self.name = self.strings['name']
 		self._me = None
@@ -22,7 +22,7 @@ class AudioShakalMod(loader.Module):
 		reply = await message.get_reply_message()
 		lvl = 0
 		if not reply:
-			await message.edit("А где реплай?")
+			await message.edit("ответь на аудио, еблан")
 			return
 		if utils.get_args_raw(message):
 			ar = utils.get_args_raw(message)
@@ -31,19 +31,19 @@ class AudioShakalMod(loader.Module):
 				if int(ar) >= 10 and int(ar) <= 100:
 					lvl = int(ar)
 				else:
-					await message.edit("Укажите уровень сшакаливания от 10 до 100!")
+					await message.edit("Укажите уровень долбоебизма от 10 до 100!")
 					return
 			except Exception as exx:
 				await message.edit("Неверный аргумент!<br>" + str(exx))
 				return
 		else:
 			lvl = 100
-		await message.edit("<b>Шакалим...</b>")
+		await message.edit("<b>Ебем Джина...</b>")
 		fname = await message.client.download_media(message=reply.media)
 		if(fname.endswith(".oga")):
 			audio = AudioSegment.from_file(fname, "ogg")
 		else:
-			await message.edit("<b>Я(.fv) не поддерживаю аудио файлы! Только голосовые!</b>")
+			await message.edit("<b>Я(.fv) не поддерживаю аудио стоны! Только голосовые!</b>")
 			os.remove(fname)
 			return
 		audio = audio + lvl
