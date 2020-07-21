@@ -17,7 +17,7 @@ class AudioShakalMod(loader.Module):
 		self.me = await client.get_me()
 	async def fvcmd(self, message):
 		""".fv <reply to voice> [шакал_lvl(не обязательно, по умолчанию 100 (от 10 до 100))]
-		    Сшакалить войс
+		    Сшакалить стон
 		"""
 		reply = await message.get_reply_message()
 		lvl = 0
@@ -38,7 +38,7 @@ class AudioShakalMod(loader.Module):
 				return
 		else:
 			lvl = 100
-		await message.edit("<b>Ебем Стасяна(проси Стасян)...</b>")
+		await message.edit("<b>Ебем Стасяна(прости Стасян)...</b>")
 		fname = await message.client.download_media(message=reply.media)
 		if(fname.endswith(".oga")):
 			audio = AudioSegment.from_file(fname, "ogg")
