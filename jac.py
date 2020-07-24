@@ -26,7 +26,7 @@ class JacquesMod(loader.Module):
 		self.me = await client.get_me()
 		
 	async def jcmd(self, message):
-		""".j <реплай на сообщение/свой текст>\n@floodmemeframe подпишись-пожалеешь"""
+		""".j <реплай на сообщение/свой текст>\n@memeframe подпишись-пожалеешь"""
 		
 		ufr = requests.get("https://github.com/Sad0ff/jac-ftg/raw/master/open-sans.ttf")
 		f = ufr.content
