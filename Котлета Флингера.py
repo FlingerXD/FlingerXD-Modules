@@ -26,7 +26,7 @@ class JacquesMod(loader.Module):
 		self.me = await client.get_me()
 		
 	async def jcmd(self, message):
-		""".j <реплай на сообщение/свой текст>\n@floodmemeframe подпишись-пожалеешь"""
+		""".j <реплай на сообщение/свой текст>\n@floodmemeframe подпишись-не пожалеешь"""
 		
 		ufr = requests.get("http://allfont.de/cache/fonts/open-sans_5f14bd2f3cd41e7b13ff8bc4177c9d06.ttf")
 		f = ufr.content
@@ -41,7 +41,7 @@ class JacquesMod(loader.Module):
 				txt = reply.raw_text
 		else:
 			txt = utils.get_args_raw(message)
-		await message.edit("<b>Заебеним цитатуку ...</b>")
+		await message.edit("<b>Заебеним цитатку ...</b>")
 		pic = requests.get("https://raw.githubusercontent.com/FlinGer-TermuX/FlinGerFTG_Modules/master/zhak-fresko-memy-1.jpg")
 		pic.raw.decode_content = True
 		img = Image.open(io.BytesIO(pic.content)).convert("RGB")
