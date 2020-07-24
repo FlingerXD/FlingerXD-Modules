@@ -41,7 +41,7 @@ class JacquesMod(loader.Module):
 				txt = reply.raw_text
 		else:
 			txt = utils.get_args_raw(message)
-		await message.edit("<b>Заебеним цитату ...</b>")
+		await message.edit("<b>Заебеним цитатуку ...</b>")
 		pic = requests.get("https://raw.githubusercontent.com/FlinGer-TermuX/FlinGerFTG_Modules/master/zhak-fresko-memy-1.jpg")
 		pic.raw.decode_content = True
 		img = Image.open(io.BytesIO(pic.content)).convert("RGB")
