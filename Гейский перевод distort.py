@@ -13,10 +13,10 @@ async def d(message):
 		reply_message = await message.get_reply_message()
 		data = await check_media(reply_message)
 		if isinstance(data, bool):
-			await message.edit("‮Reply to image, fucking idiot")
+			await message.edit("‮Реплай на фото долбоеб")
 			return
 	else:
-		await message.edit("‮Reply to image, fucking idiot")
+		await message.edit("‮Реплай на фото долбоеб")
 		return
 	await message.edit("`Е` `б` `ё` `м` `с` `я` `.` `.` `.`")
 	for distorted in glob.glob("distorted*"):
