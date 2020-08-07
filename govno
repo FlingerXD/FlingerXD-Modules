@@ -8,5 +8,5 @@ async def _(event):
         for i in range(25):
             a = i + 1
             sleep(0.1)
-            await event.edit("Рот" +" " +"в" +"говне" +"💩" * a + "...")
+            await event.edit("Рот" +" " +"в" +"говне " +"💩" * a + "...")
 
