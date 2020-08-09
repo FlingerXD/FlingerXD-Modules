@@ -17,7 +17,7 @@ class CuMod(loader.Module):
         self._db = db
         self._client = client
         self.me = await client.get_me()
-    async def cucmd(self, message):
+    async def pidrcmd(self, message):
         'Скопировать уебана :3'
         reply = await message.get_reply_message()
         try:
