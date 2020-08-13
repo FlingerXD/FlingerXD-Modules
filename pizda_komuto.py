@@ -14,12 +14,12 @@ class KickRandomMod(loader.Module):
 		"""Используй .kickpizda, чтобы пиздануть случайное существо (может кикнуть тебя)."""
 		user = random.choice([i for i in await event.client.get_participants(event.to_id)])
 
-		await event.edit('<b>Кто сейчас пизданется...</b>')
+		await event.edit('<b>Кто сейчас пизданется...(нет)</b>')
 		await sleep(3)
 
 		# Попытка кика...
 		try:
-			await event.client.kick_participant(event.chat_id, user.id)
+			#await event.client.kick_participant(event.chat_id, user.id)
 			await sleep(0.5)
 		except:
 			await event.edit('<b>Я лох, у меня нет прав чтобы кикнуть это чмо</b>')
