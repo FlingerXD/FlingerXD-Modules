@@ -1,4 +1,4 @@
-from .. import loader, client, utils
+from .. import loader, utils
 from asyncio import sleep
 import random
 
