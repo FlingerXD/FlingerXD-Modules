@@ -7,7 +7,7 @@ def register(cb):
 	cb(KickRandomMod())
 
 class KickRandomMod(loader.Module):
-	"""Кик рандом"""
+	"""Пизда кому-то"""
 	strings = {'name': 'PizdaKomuto'}
 
 	async def kickpizdacmd(self, event):
