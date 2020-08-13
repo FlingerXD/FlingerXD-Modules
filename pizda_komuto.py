@@ -15,13 +15,13 @@ class KickRandomMod(loader.Module):
 		user = random.choice([i for i in await event.client.get_participants(event.to_id)])
 
 		await event.edit('<b>Кто-то сейчас пизданется...</b>')
-		#ti = await event.client.get_me(event.to_id)
-		#await event.edit(f"{ti.user_id}")
+		ti = await event.client.get_me(event.to_id)
+		await event.edit(f"{ti.user_id}")
 		await sleep(3)
 
 		# Попытка кика...
 		try:
-			await event.client.kick_participant(event.chat_id, user.id)
+			#await event.client.kick_participant(event.chat_id, user.id)
 			await sleep(0.5)
 		except:
 			await event.edit('<b>Я лох, у меня нет прав чтобы кикнуть это чмо</b>')
@@ -30,6 +30,6 @@ class KickRandomMod(loader.Module):
 		# Кто кикнут.
 		name = str(user.first_name)
 		name += " "+user.last_name if user.last_name else ''
-		await event.edit(f"Бог модуля Флингер пизданул <a href=\"tg://user?id={user.id}\">{user.first_name}</a>, и он улетел нахуй!")
+		#await event.edit(f"Бог модуля Флингер пизданул <a href=\"tg://user?id={user.id}\">{user.first_name}</a>, и он улетел нахуй!")
 		#ti = await event.client.get_me()
 		#await event.edit(ti)
