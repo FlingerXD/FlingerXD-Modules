@@ -12,7 +12,7 @@ class KickRandomMod(loader.Module):
     strings = {'name': 'PizdaKomuto'}
 
     async def kickpizdacmd(self, event):
-        """Используй .kickpizda, чтобы пиздануть случайное существо (может кикнуть тебя)."""
+        """Используй .kickpizda, чтобы пиздануть случайное существо"""
         myId = await event.client.get_me(event.to_id)
         user = random.choice([i for i in await event.client.get_participants(event.to_id)])
         while myId.user_id == user.id:
