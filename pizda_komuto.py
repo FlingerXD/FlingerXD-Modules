@@ -1,4 +1,4 @@
-from .. import loader, Client
+from .. import loader, client, utils
 from asyncio import sleep
 import random
 
@@ -15,8 +15,8 @@ class KickRandomMod(loader.Module):
 		user = random.choice([i for i in await event.client.get_participants(event.to_id)])
 
 		await event.edit('<b>Кто сейчас пизданется... Оно работает если что</b>')
-                ti = await Client.get_me()
-                await event.edit(ti)
+		ti = await client.get_me()
+		await event.edit(ti)
 		await sleep(3)
 
 		# Попытка кика...
@@ -31,5 +31,5 @@ class KickRandomMod(loader.Module):
 		name = str(user.first_name)
 		name += " "+user.last_name if user.last_name else ''
 		#await event.edit(f"Бог модуля Флингер пизданул <a href=\"tg://user?id={user.id}\">{user.first_name}</a>, и он улетел нахуй!")
-                #ti = await event.client.get_me()
-                #await event.edit(ti)
+		#ti = await event.client.get_me()
+		#await event.edit(ti)
