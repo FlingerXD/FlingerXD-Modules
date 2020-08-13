@@ -1,4 +1,4 @@
-from .. import loader
+from .. import loader, Client
 from asyncio import sleep
 import random
 
