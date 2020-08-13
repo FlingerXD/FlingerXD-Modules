@@ -15,8 +15,8 @@ class KickRandomMod(loader.Module):
 		user = random.choice([i for i in await event.client.get_participants(event.to_id)])
 
 		await event.edit('<b>Кто-то сейчас пизданется...</b>')
-		ti = await event.client.get_me(event.user_id)
-		await event.edit(f"{ti}")
+		ti = await event.client.get_me(event.to_id)
+		await event.edit(f"{ti[0]}")
 		await sleep(3)
 
 		# Попытка кика...
