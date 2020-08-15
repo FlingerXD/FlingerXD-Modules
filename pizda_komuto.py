@@ -9,20 +9,7 @@ def register(cb):
 
 class KickRandomMod(loader.Module):
     """Пизда кому-то"""
-    strings = {'name': 'PizdaKomuto'}
-
-    async def kickpizdacmd(self, event):
-        """Используй .kickpizda, чтобы пиздануть случайное существо"""
-        myId = await event.client.get_me(event.to_id)
-        user = random.choice([i for i in await event.client.get_participants(event.to_id)])
-        while myId.user_id == user.id:
-            user = random.choice([i for i in await event.client.get_participants(event.to_id)])
-        await event.edit('<b>Кто-то сейчас пизданется...</b>')
-        await sleep(3)
-
-        # Попытка кика...
-        try:
-            await event.client.kick_participant(event.chat_id, user.id)
+    stringskick_participant(event.chat_id, user.id)
             await sleep(0.5)
         except:
             await event.edit('<b>Я лох, у меня нет прав чтобы кикнуть это чмо</b>')
