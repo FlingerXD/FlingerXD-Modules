@@ -6,42 +6,7 @@ import logging
 
 from telethon import types
 
-logger = logging.getLogger(__name__)
-
-@loader.tds
-class AFKMod(loader.Module):
-    """Посылает нахуй при вашем теге"""
-    strings = {"name": "RFD",
-               "gone": "Режим авто-пидара включе́н",
-               "back": "Режим авто-пидара выключен",
-               "afk": "<b>НЕ еби меня.</b>",
-               "afk_reason": "{}"}
-
-    async def client_ready(self, client, db):
-        self._db = db
-        self._me = await client.get_me()
-
-    async def pdrcmd(self, message):
-        """.rfd [текст]"""
-        if utils.get_args_raw(message):
-            self._db.set(__name__, "afk", utils.get_args_raw(message))
-        else:
-            self._db.set(__name__, "afk", True)
-        self._db.set(__name__, "gone", time.time())
-        await self.allmodules.log("afk", data=utils.get_args_raw(message) or None)
-        await utils.answer(message, self.strings("gone", message))
-
-    async def unpdrcmd(self, message):
-        """Перестаёт писать"""
-        self._db.set(__name__, "afk", False)
-        self._db.set(__name__, "gone", None)
-        await self.allmodules.log("unafk")
-        await utils.answer(message, self.strings("back", message))
-
-    async def watcher(self, message):
-        if not isinstance(message, types.Message):
-            return
-        if message.mentioned or getattr(message.to_id, "user_id", None) == self._me.id:
+logger = logging.attr(message.to_id, "user_id", None) == self._me.id:
             if self.get_afk() != False:
                 afk_state = self.get_afk()
                 ret = self.strings("afk_reason", message).format(afk_state)
