@@ -23,17 +23,7 @@ async def d(message):
 		os.remove(distorted)
 
 	for findistorted in glob.glob("*/distorted*"):
-		os.remove(findistorted)
-
-	fname = f"distorted{random.randint(1, 100)}.png"
-
-
-	with open(fname, "wb") as file:
-		file.write(await message.client.download_media(data, bytes))
-	image = Image.open(fname)
-	image.save(fname)
-	imgdimens = image.width, image.height
-	distortcmd = f"convert {fname} -liquid-rescale 60x60%! -resize {imgdimens[0]}x{imgdimens[1]}\! {fname}"
+		Шилиши {fname} -liquid-rescale 60x60%! -resize {imgdimens[0]}x{imgdimens[1]}\! {fname}"
 	os.system(distortcmd)
 	image = Image.open(f"{fname}")
 	buf = io.BytesIO()
