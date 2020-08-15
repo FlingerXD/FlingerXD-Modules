@@ -42,12 +42,6 @@ class GGdotGGMod(loader.Module):
 			long_url = m_text
 				
 		
-		if 'http://' not in long_url and 'https://' not in long_url:
-			long_url = 'http://' + long_url
-		t_check = f"URL: {long_url}\nCheck..."
-		await utils.answer(message, t_check)
-		check = post('http://gg.gg/check', data={'custom_path': None, 'use_norefs': '0', 'long_url': long_url, 'app': 'site', 'version': '0.1'}).text
-		if check != "ok":
 			await utils.answer(message, check)
 			return
 		await utils.answer(message, "Create...")
