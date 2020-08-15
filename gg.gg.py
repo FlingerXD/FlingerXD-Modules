@@ -38,16 +38,7 @@ class GGdotGGMod(loader.Module):
 	async def client_ready(self, client, db):
 		self.client = client
 		
-	async def ggcmd(self, message):
-		""".gg <длинная ссылка или реплай на ссылку> """
-		m_text = utils.get_args_raw(message)
-		if not m_text:
-			reply = await message.get_reply_message()
-			if not reply:
-				await utils.answer(message, self.strings["some_rong"])
-				return
-			long_url = reply.raw_text
-		else:
+	async def ggcmd
 			long_url = m_text
 				
 		
