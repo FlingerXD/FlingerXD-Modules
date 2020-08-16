@@ -42,7 +42,7 @@ class JacquesMod(loader.Module):
 		else:
 			txt = utils.get_args_raw(message)
 		await message.edit("<b>Заебеним цитату ...</b>")
-		pic = requests.get("https://github.com/FlinGer-TermuX/FlinGerFTG_Modules/blob/master/IMG_20200816_073912_121.jpg")
+		pic = requests.get("https://0x0.st/iYJY.jpg")
 		pic.raw.decode_content = True
 		img = Image.open(io.BytesIO(pic.content)).convert("RGB")
  
