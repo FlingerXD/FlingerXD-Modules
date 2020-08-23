@@ -5,11 +5,11 @@ import asyncio
 from.. import loader 
 
 def register(cb):
-	cb(GovnoMod()) 
+	cb(SpermaMod()) 
 	
-class GovnoMod(loader.Module):
+class SpermaMod(loader.Module):
 	"""Сперма"""
-	strings = {'name': Сперма'} 
+	strings = {'name': 'Сперма'} 
 	
 	async def spermacmd(self, message):
 		"""Просто .sperma"""
