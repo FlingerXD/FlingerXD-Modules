@@ -8,9 +8,9 @@ import io
 from textwrap import wrap
 
 def register(cb):
-	cb(JacquesMod())
+	cb(JacquesTwoMod())
 	
-class JacquesMod(loader.Module):
+class JacquesTwoMod(loader.Module):
 	"""Жаконизатор V2"""
 	strings = {
 		'name': 'Катлета Флингера V2',
