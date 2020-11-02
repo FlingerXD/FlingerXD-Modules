@@ -12,8 +12,8 @@ logger = logging.getLogger(__name__)
 class NahuyMod(loader.Module):
     """Посылает нахуй при вашем теге"""
     strings = {"name": "Idi nahuy",
-               "gone": "Идите-ка все нахуй!",
-               "back": "Ладно, иди ко мне пиздюк",
+               "gone": "<b>Идите-ка все нахуй!</b>",
+               "back": "<b>Ладно, иди ко мне пиздюк</b>",
                "afk": "<b>НЕ еби меня</b>",
                "afk_reason": "{}"}
 
