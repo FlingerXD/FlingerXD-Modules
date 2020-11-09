@@ -52,7 +52,7 @@ class FirdavsBrawlMod(loader.Module):
 		t = text + "\n"
 		#t = t.replace("𓃐","\n")
 		draw = ImageDraw.Draw(img)
-		font = ImageFont.truetype(io.BytesIO(f), 50, encoding='UTF-8')
+		font = ImageFont.truetype(io.BytesIO(f), 65, encoding='UTF-8')
 		w, h = draw.multiline_textsize(t, font=font)
 		imtext = Image.new("RGBA", (w+50, h+50), (0, 0,0,0))
 		draw = ImageDraw.Draw(imtext)
