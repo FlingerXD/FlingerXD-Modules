@@ -26,7 +26,7 @@ class JacquesTwoMod(loader.Module):
 		self.me = await client.get_me()
 		
 	async def j2cmd(self, message):
-		""".j <реплай на сообщение/свой текст>\n@TermuxTools_and_FTG канал автора :3"""
+		""".j <реплай на сообщение/свой текст>"""
 		
 		ufr = requests.get("http://allfont.de/cache/fonts/lobster_0bb8e965b43150fe5f875de8f9692762.ttf")
 		f = ufr.content
