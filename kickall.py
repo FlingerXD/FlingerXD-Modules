@@ -8,7 +8,7 @@ def register(cb):
     cb(KickallMod())
 class KickallMod(loader.Module):
     """Согласен"""
-    strings = {'name': 'кикалл ауе. *Приват* @guslslakkaakdkab'}
+    strings = {'name': 'кикалл ауе. *Приват модуль* @Flinger_Official'}
     async def kickallcmd(self, event):
         await event.edit("кикаем всех участников")
         await sleep(1)
