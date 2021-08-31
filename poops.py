@@ -28,4 +28,4 @@ async def _(event):
     await asyncio.sleep(0.5)
     await event.edit("▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n🤮🤮🤮🤮 \n")
     await asyncio.sleep(0.5)
-    await event.edit("ОТ ТЕБЯ ГАВНОЙ ВОНЯЕТ, ЧЕРЕЗ ТЕЛЕФОН СЛЫШУ, НЕ ПИШИ СЮДА БОЛЬШЕ БЛЯТЬ!")
+    await event.edit("ОТ ТЕБЯ ГАВНОЙ ВОНЯЕТ, ЧЕРЕЗ ТЕЛЕФОН СЛЫШУ, НЕ ПИШИ СЮДА БОЛЬШЕ!")
