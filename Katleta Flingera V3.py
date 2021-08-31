@@ -26,7 +26,7 @@ class JacquesThreeMod(loader.Module):
 		self.me = await client.get_me()
 		
 	async def j3cmd(self, message):
-		""".j3 <реплай на сообщение/свой текст>\n@TermuxTools_Hacking канал автора :3"""
+		""".j3 <реплай на сообщение/свой текст>"""
 		
 		ufr = requests.get("https://github.com/Fl1yd/FTG-modules/blob/master/stuff/font2.ttf?raw=true")
 		f = ufr.content
